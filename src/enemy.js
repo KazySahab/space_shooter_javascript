@@ -11,7 +11,7 @@ class Enemy {
         }
         this.velocity = {
             x: 0,
-            y: 1
+            y: 0.1
         }
         this.Image = new Image();
         this.Image.src = './resources/enemy.png'
@@ -22,8 +22,8 @@ class Enemy {
         ctx.closePath();
     }
     move() {
-        this.position.x += this.velocity.x;
-        this.position.y += this.velocity.y;
+        this.position.x += this.velocity.x*deltaTime;
+        this.position.y += this.velocity.y*deltaTime;
     }
     collision_player(player) {
         if (this.position.x + this.size.width >= player.position.x &&
@@ -35,8 +35,8 @@ class Enemy {
     }
     collision_bullet(bullets) {
         for (let i = 0; i < bullets.length; i++) {
-            if (this.position.x + this.size.width >= bullets[i].position.x &&
-                this.position.x <= bullets[i].position.x + bullets[i].size.width &&
+            if (this.position.x + this.size.width-5 >= bullets[i].position.x &&
+                this.position.x+5 <= bullets[i].position.x + bullets[i].size.width &&
                 this.position.y + this.size.height - 20 >= bullets[i].position.y &&
                 this.position.y <= bullets[i].position.y + bullets[i].size.height) {
                 this.velocity = 0;

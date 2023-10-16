@@ -10,7 +10,7 @@ class Bullet{
         }
         this.velocity={
             x:0,
-            y:-5
+            y:-0.5
         }
         this.Image= new Image();
         this.Image.src = "./resources/bullet.png"
@@ -21,8 +21,8 @@ class Bullet{
         ctx.closePath();
     }
     move(){
-        this.position.x+=this.velocity.x;
-        this.position.y+=this.velocity.y;
+        this.position.x+=this.velocity.x*deltaTime;
+        this.position.y+=this.velocity.y*deltaTime;
     }
     update(){
         this.draw();
