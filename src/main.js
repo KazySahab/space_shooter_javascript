@@ -29,7 +29,6 @@ function check_player_is_alive(){
 
 function animate() {
     ctx.clearRect(0, 0, width, height); 
-    
     player.update();
     for(i=0;i<enemies.length;i++)
     {
@@ -41,7 +40,7 @@ function animate() {
         bullets[i].update();
     }
     check_player_is_alive(); 
-
     requestAnimationFrame(animate);
 }
+
 animate();

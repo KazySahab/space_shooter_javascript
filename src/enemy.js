@@ -15,9 +15,7 @@ class Enemy {
         }
         this.Image = new Image();
         this.Image.src = './resources/enemy.png'
-
     }
-
     draw() {
         ctx.beginPath();
         ctx.drawImage(this.Image, this.position.x, this.position.y, this.size.width, this.size.height);
@@ -35,7 +33,6 @@ class Enemy {
             player.Alive = false;
         }
     }
-
     collision_bullet(bullets) {
         for (let i = 0; i < bullets.length; i++) {
             if (this.position.x + this.size.width >= bullets[i].position.x &&
@@ -60,6 +57,4 @@ class Enemy {
         this.move();
         this.collision_border();
     }
-
-
 };

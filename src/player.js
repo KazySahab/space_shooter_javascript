@@ -20,8 +20,6 @@ class Player {
     draw()
     {
         ctx.beginPath();
-        ctx.fillStyle="green";
-        ctx.fillRect(this.position.x, this.position.y, this.size.width, this.size.height)
         ctx.drawImage(this.Image,this.position.x,this.position.y,this.size.width,this.size.height);
         ctx.closePath();
     }
