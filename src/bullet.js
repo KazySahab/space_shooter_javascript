@@ -17,6 +17,8 @@ class Bullet{
     }
     draw(){
         ctx.beginPath();
+       // ctx.fillStyle="white";
+      //  ctx.fillRect(this.position.x, this.position.y, this.size.width, this.size.height)
         ctx.drawImage(this.Image,this.position.x,this.position.y,this.size.width,this.size.width);
         ctx.closePath();
     }

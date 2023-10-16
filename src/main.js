@@ -1,11 +1,15 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+
 let width = canvas.width = 800;
 let height = canvas.height = 800;
+
 let num_of_enemy = 20;
+
 const player = new Player();
 const bullets = [];
 const enemies = [];
+
 setInterval(() => {
     enemies.push(new Enemy());
 }, 2000);
