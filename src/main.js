@@ -17,7 +17,7 @@ collide.src="./resources/collide.mp3"
 
 const bg = new Audio();
 bg.src="./resources/bg.wav"
-bg.volume = 0.1;
+bg.volume = 0.15;
 
 const player = new Player();
 const bullets = [];
